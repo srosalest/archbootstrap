@@ -15,10 +15,6 @@ echo ""
 ln -sf /usr/share/zoneinfo/America/Santiago /etc/localtime
 hwclock --systohc
 
-pacman -Syy linux linux-lts linux-headers linux-lts-headers iwd dhclient \
-       vim emacs base-devel openssh dialog lvm2 grub efibootmgr dosfstools \
-       os-prober mtools emacs git reflector cups xdg-utils xdg-user-dirs
-
 # locale
 
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
