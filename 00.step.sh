@@ -57,7 +57,8 @@ pacstrap /mnt \
          base base-devel linux linux-firmware lvm2 dialog git vim \
          iwd dhclient netctl wpa_supplicant \
          xorg dmenu picom nitrogen maim xscreensaver libxss \
-         rxvt-unicode rxvt-unicode-terminfo mesa-libgl xterm xorg-xinit xterm
+         rxvt-unicode rxvt-unicode-terminfo mesa-libgl xterm xorg-xinit xterm \
+         stow firefox
 
 
 rsync -avP $BASEDIR /mnt/bootstrap
