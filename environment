@@ -1,0 +1,7 @@
+ARCH_HOSTNAME=hostname
+ARCH_USER=username
+ARCH_DEVICE=/dev/nvme0n1
+ARCH_PVNAME=lvmpv0
+ARCH_VGNAME=lvmvg0
+ARCH_LVNAME=lvmarch
+ARCH_SWAPSIZE=6G
