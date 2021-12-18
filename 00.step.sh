@@ -54,11 +54,12 @@ mount $ARCH_DEVICE1 /mnt/boot
 genfstab -U /mnt >> /mnt/etc/fstab
 
 pacstrap /mnt \
-         base base-devel linux linux-firmware lvm2 dialog git vim \
-         iwd dhclient netctl wpa_supplicant \
-         xorg dmenu picom nitrogen maim xscreensaver libxss \
-         rxvt-unicode rxvt-unicode-terminfo mesa-libgl xterm xorg-xinit xterm \
-         stow firefox
+         base base-devel cups dhclient dialog dmenu dosfstools efibootmgr \
+         emacs firefox git grub iwd libxss \
+         linux linux-firmware linux-headers linux-lts linux-lts-headers \
+         lvm2 maim mesa-libgl mtools netctl nitrogen openssh os-prober picom \
+         reflector rxvt-unicode rxvt-unicode-terminfo stow vim wpa_supplicant \
+         xclip xdg-user-dirs xdg-utils xorg xorg-xinit xscreensaver xterm
 
 
 rsync -avP $BASEDIR /mnt/bootstrap
