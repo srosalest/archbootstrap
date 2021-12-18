@@ -15,7 +15,7 @@ echo ""
 ln -sf /usr/share/zoneinfo/America/Santiago /etc/localtime
 hwclock --systohc
 
-echo pacman -Syy linux linux-lts linux-headers linux-lts-headers iwd dhclient \
+pacman -Syy linux linux-lts linux-headers linux-lts-headers iwd dhclient \
        vim emacs base-devel openssh dialog lvm2 grub efibootmgr dosfstools \
        os-prober mtools emacs git reflector cups xdg-utils xdg-user-dirs
 
@@ -249,7 +249,7 @@ GRUB_TERMINAL_INPUT=console
 
 # The resolution used on graphical terminal
 # note that you can use only modes which your graphic card supports via VBE
-# you can see them in real GRUB with the command `vbeinfo'
+# you can see them in real GRUB with the command vbeinfo
 GRUB_GFXMODE=auto
 
 # Uncomment to allow the kernel use the same resolution used by grub
