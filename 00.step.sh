@@ -60,7 +60,7 @@ pacstrap /mnt \
          lvm2 maim mesa-libgl mtools netctl nitrogen openssh os-prober picom \
          reflector rxvt-unicode rxvt-unicode-terminfo stow vim wpa_supplicant \
          xclip xdg-user-dirs xdg-utils xorg xorg-xinit xscreensaver xterm \
-         xorg-xauth
+         xorg-xauth libffi
 
 
 rsync -avP $BASEDIR /mnt/bootstrap
