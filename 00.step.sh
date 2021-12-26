@@ -9,6 +9,7 @@ cat $ENVFILE
 echo ""
 
 timedatectl set-ntp true
+loadkeys la-latin1
 
 pacman -Syy
 
@@ -51,17 +52,16 @@ mount /dev/$ARCH_VGNAME/$ARCH_LVNAME /mnt
 mkdir -p /mnt/boot
 mount $ARCH_DEVICE1 /mnt/boot
 
-genfstab -U /mnt >> /mnt/etc/fstab
-
 pacstrap /mnt \
-         base base-devel cups dhclient dialog dmenu dosfstools efibootmgr \
+         base base-devel cups dmenu efibootmgr \
          emacs firefox git grub iwd libxss \
-         linux linux-firmware linux-headers linux-lts linux-lts-headers \
-         lvm2 maim mesa-libgl mtools netctl nitrogen openssh os-prober picom \
-         reflector rxvt-unicode rxvt-unicode-terminfo stow vim wpa_supplicant \
-         xclip xdg-user-dirs xdg-utils xorg xorg-xinit xscreensaver xterm \
-         xorg-xauth libffi
+         linux linux-firmware linux-headers \
+         lvm2 maim mesa nitrogen openssh os-prober picom \
+         reflector stow vim \
+         xclip xorg-server xorg-apps xorg-xinit xorg-xmessage xorg-xauth \
+         pkgconf libx11 libxft libxinerama libxrandr libxss
 
+genfstab -U /mnt >> /mnt/etc/fstab
 
 rsync -avP $BASEDIR /mnt/bootstrap
          

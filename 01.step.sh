@@ -123,7 +123,6 @@ HOOKS=(base udev autodetect modconf block encrypt lvm2 filesystems keyboard fsck
 #COMPRESSION_OPTIONS=()
 EOF
 mkinitcpio -p linux
-mkinitcpio -p linux-lts
 
 # sudoers
 
