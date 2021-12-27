@@ -59,7 +59,7 @@ pacstrap /mnt \
          lvm2 maim mesa nitrogen openssh os-prober picom \
          reflector stow vim \
          xclip xorg-server xorg-apps xorg-xinit xorg-xmessage xorg-xauth \
-         pkgconf libx11 libxft libxinerama libxrandr libxss
+         pkgconf libx11 libxft libxinerama libxrandr libxss xterm
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
